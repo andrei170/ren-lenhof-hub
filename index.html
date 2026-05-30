@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG1 Consulting | Built For Ren Lenhof</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Built for Ren Lenhof (The Momtographer Method), by AG1 Consulting">
+<meta property="og:description" content="A productized application + discovery call funnel for The Momtographer Method, built around a 15-year Wisconsin photography brand.">
+<meta property="og:url" content="https://andrei170.github.io/ren-lenhof-hub/">
+<meta property="og:image" content="https://andrei170.github.io/ren-lenhof-hub/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Built for Ren Lenhof (The Momtographer Method), by AG1 Consulting">
+<meta name="twitter:description" content="A productized application + discovery call funnel for The Momtographer Method.">
+<meta name="twitter:image" content="https://andrei170.github.io/ren-lenhof-hub/og-image.png">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📸&lt;/text&gt;&lt;/svg&gt;">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #000000; --surface: #0A0A0F;
+    --gold-1: #D4A84B; --gold-2: #B8922E; --gold-flat: #C9973A;
+    --white: #FFFFFF; --muted: #9A9AA5; --border: rgba(255,255,255,0.10);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter','Open Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .gold-text { background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  nav { position: sticky; top: 0; z-index: 50; background: rgba(0,0,0,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; max-width: 1080px; margin: 0 auto; }
+  .wordmark { font-weight: 800; font-size: 1.3rem; letter-spacing: 0.5px; }
+  .wordmark .ag { background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .wordmark .co { color: var(--white); font-weight: 800; }
+  .nav-cta { font-size: 0.82rem; font-weight: 700; text-decoration: none; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); padding: 9px 18px; border-radius: 40px; white-space: nowrap; }
+  header.hero { padding: 90px 0 70px; text-align: center; position: relative; background: radial-gradient(circle at 50% 0%, rgba(201,151,58,0.10), transparent 55%); }
+  .badge { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold-flat); border: 1px solid rgba(201,151,58,0.4); border-radius: 40px; padding: 8px 18px; margin-bottom: 30px; }
+  .brand-row { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
+  .brand-block { font-weight: 800; font-size: 1.8rem; letter-spacing: 0.5px; }
+  .brand-x { color: var(--muted); font-size: 1.4rem; font-weight: 400; }
+  header.hero h1 { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 800; line-height: 1.12; margin-bottom: 20px; }
+  header.hero p.sub { color: var(--muted); font-size: 1.1rem; max-width: 620px; margin: 0 auto; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 34px 18px; margin: 50px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  .stat { text-align: center; }
+  .stat .num { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 800; line-height: 1; }
+  .stat .label { font-size: 0.82rem; color: var(--muted); margin-top: 10px; letter-spacing: 0.4px; }
+  .sec-head { text-align: center; margin: 70px 0 36px; }
+  .sec-head .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold-flat); }
+  .sec-head h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; margin-top: 12px; }
+  .acc { display: flex; flex-direction: column; gap: 16px; }
+  .card { background: rgba(10,10,15,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
+  .acc-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; }
+  .acc-head .left { display: flex; align-items: center; gap: 16px; }
+  .acc-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); }
+  .acc-head h3 { font-size: 1.08rem; font-weight: 800; }
+  .acc-icon { flex-shrink: 0; color: var(--gold-flat); font-size: 1.5rem; transition: transform 0.35s ease; line-height: 1; }
+  .card.open .acc-icon { transform: rotate(45deg); }
+  .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.45s ease; }
+  .acc-inner { padding: 0 24px 26px; color: #D7D7DE; }
+  .acc-inner p { margin-bottom: 14px; }
+  .acc-inner p:last-child { margin-bottom: 0; }
+  .acc-inner strong { color: var(--white); }
+  .acc-inner .gold-label { color: var(--gold-flat); font-weight: 700; }
+  .item { border-left: 2px solid rgba(201,151,58,0.45); padding: 4px 0 4px 16px; margin-bottom: 18px; }
+  .item:last-child { margin-bottom: 0; }
+  .item .name { font-weight: 800; color: var(--white); display: block; margin-bottom: 4px; }
+  .item .hl { color: #C7C7D0; font-style: italic; }
+  .pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--gold-flat); border: 1px solid rgba(201,151,58,0.4); border-radius: 30px; padding: 4px 12px; margin-bottom: 8px; }
+  .stack-list { list-style: none; }
+  .stack-list li { padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .stack-list li:last-child { border-bottom: none; }
+  .stack-list li::before { content: "+"; position: absolute; left: 0; color: var(--gold-flat); font-weight: 800; }
+  .btn-link { display: inline-block; margin-top: 16px; text-decoration: none; font-weight: 700; font-size: 0.92rem; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); padding: 13px 26px; border-radius: 40px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .btn-link:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,151,58,0.3); }
+  .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .model{background:rgba(10,10,15,0.7);border:1px solid var(--border);border-radius:14px;padding:24px 22px;}
+  .model .ic{color:var(--gold-flat);font-weight:800;font-size:0.74rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:block;}
+  .model h4{font-size:1rem;font-weight:800;margin-bottom:8px;color:var(--white);}
+  .model p{color:var(--muted);font-size:0.92rem;margin:0;}
+  .scarcity{text-align:center;color:var(--gold-flat);font-weight:700;font-size:0.95rem;margin:28px auto 0;max-width:620px;}
+  .hub-faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  .hub-faq .qa{background:rgba(10,10,15,0.6);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
+  .hub-faq .qa h4{font-size:1rem;font-weight:800;color:var(--white);margin-bottom:6px;}
+  .hub-faq .qa p{color:var(--muted);font-size:0.93rem;margin:0;}
+  .sticky-cta{display:none;}
+  .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .proc { background: rgba(10,10,15,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; padding: 26px 24px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+  .proc .step { font-size: 0.78rem; font-weight: 800; letter-spacing: 1px; color: var(--gold-flat); margin-bottom: 12px; }
+  .proc h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+  .proc p { color: var(--muted); font-size: 0.95rem; }
+  .cta-box { text-align: center; margin: 80px 0 60px; padding: 60px 30px; background: var(--surface); border: 1px solid rgba(201,151,58,0.25); border-radius: 22px; background-image: radial-gradient(circle at 50% 0%, rgba(201,151,58,0.12), transparent 60%); box-shadow: 0 24px 70px rgba(0,0,0,0.55); }
+  .cta-box h2 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+  .cta-box p { color: var(--muted); max-width: 560px; margin: 0 auto 30px; font-size: 1.08rem; }
+  .cta-box .btn-link { font-size: 1.05rem; padding: 16px 38px; margin-top: 0; }
+  footer { text-align: center; padding: 40px 0 60px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+  footer .wordmark { font-size: 1.05rem; margin-bottom: 8px; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (max-width:720px){
+    .model-grid{grid-template-columns:1fr;}
+    body{padding-bottom:74px;}
+    .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:12px 16px;}
+    .sticky-cta a{display:block;width:100%;text-align:center;color:var(--black);background:linear-gradient(135deg,var(--gold-1),var(--gold-2));font-weight:700;padding:14px;border-radius:40px;text-decoration:none;font-size:0.95rem;}
+  }
+  @media (max-width: 720px) { .stats { grid-template-columns: 1fr; gap: 24px; padding: 30px 18px; } .process-grid { grid-template-columns: 1fr; } .nav-cta { display: none; } header.hero { padding: 64px 0 50px; } .brand-block { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="wordmark"><span class="ag">AG1</span> <span class="co">CONSULTING</span></div>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="nav-cta">Book a Call</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge reveal">Built Exclusively For Ren Lenhof</span>
+    <div class="brand-row reveal">
+      <div class="brand-block"><span class="gold-text">AG1</span> <span style="color:var(--white)">CONSULTING</span></div>
+      <span class="brand-x">for</span>
+      <div class="brand-block" style="color:var(--white)">THE MOMTOGRAPHER METHOD</div>
+    </div>
+    <h1 class="reveal">A Productized Application + Discovery Call Funnel,<br><span class="gold-text">Built For Your Coaching Brand</span></h1>
+    <p class="sub reveal">Your coaching brand is named, the audience is there, and the application form exists. What is missing is the pipe. Here is the funnel we would build for you.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats reveal">
+    <div class="stat"><div class="num"><span data-count="6">0</span>+</div><div class="label">Hours of Research</div></div>
+    <div class="stat"><div class="num"><span data-count="7">0</span></div><div class="label">Custom Deliverables</div></div>
+    <div class="stat"><div class="num"><span data-count="2">0</span></div><div class="label">Live Pages</div></div>
+  </div>
+
+  <div class="sec-head reveal">
+    <div class="eyebrow">The Work</div>
+    <h2>Everything We Built For You</h2>
+  </div>
+
+  <div class="acc">
+
+    <!-- 1 RESEARCH -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">1</div><h3>Research Snapshot</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>You have already done the hardest part. The Momtographer Method is named, the @momtographermethod Instagram exists, the application Google Form is live, and you have written about mentorship on the Studio 29 blog. The coaching brand is real.</p>
+        <p>What is missing is the funnel. There is no public price for the program. The /coaching page on foto-29.com is indexed but currently fragile (404 on direct curl). There is no Calendly or Cal.com link anywhere. The application is a manual Google Form that you have to read and reply to in order to get to a call.</p>
+        <p><span class="gold-label">The Pinterest unlock:</span> your @ren_lenhof Pinterest account has 38,835 followers. That is bigger than your 10.5K studio Instagram. Right now it has zero purpose-built path into the coaching offer. The single biggest free traffic channel for a photographer coach is going nowhere.</p>
+        <p><span class="gold-label">The wedge:</span> productize The Momtographer Method as an application + scheduled discovery call program, replace the Google Form with a real intake-to-call pipeline, and finally turn 38K of Pinterest reach into qualified applications.</p>
+      </div></div>
+    </div>
+
+    <!-- 2 THE OFFER -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">2</div><h3>The Productized Offer: The Momtographer Method</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>We keep your actual brand name. We position it as the rung above your current Google-Form-and-DM intake: a 12-week mentorship for photographer-moms, application + scheduled discovery call to get in.</p>
+        <p><span class="gold-label">The promise (education-framed):</span> in 12 weeks, a real photography business. A camera you understand, a portfolio you are not embarrassed to send, a pricing structure that respects your time, and a marketing system that brings clients in on repeat.</p>
+        <p><span class="gold-label">The mechanism (your existing teaching, named): The Momtographer Method</span></p>
+        <p>1. Master Your Camera (Without The Manual)<br>2. Build A Portfolio That Books<br>3. Price For The Life You Want</p>
+        <p><span class="gold-label">What is inside the program:</span></p>
+        <ul class="stack-list">
+          <li>12 weeks of live group teaching across the three pillars</li>
+          <li>Per-month 1:1 audit call with you on real bookings, real pricing, real client emails</li>
+          <li>Private community for the in-between questions</li>
+          <li>The Studio 29 template library (pricing PDFs, client welcome guide, contract language, IG content prompts, Pinterest pin templates)</li>
+          <li>Camera + editing fundamentals (the four settings, posing, editing rhythm)</li>
+          <li>Pricing, packaging, and marketing-system teaching (including the Pinterest + IG + AI playbook)</li>
+        </ul>
+        <p style="margin-top:14px;"><span class="gold-label">Investment positioning:</span> starts in the four figures, payment plan available, price revealed on the discovery call. High enough to filter for committed mom-students who will actually show up and do the work, low enough that a SAHM with a part-time partner can stretch to it on a payment plan. The four-figure framing solves your "no public price" wedge cleanly: you keep positioning power, the funnel finally tells the prospect it is a real investment.</p>
+      </div></div>
+    </div>
+
+    <!-- 3 NURTURE -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">3</div><h3>The Nurture Sequence (5 emails)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>Written in your voice (Wisconsin mom-to-mom, anti-fluff, double-exclamation-stress), sent after a free lead magnet opt-in ("Your First 10 Paid Clients" PDF), warming a photographer-mom toward applying.</p>
+        <div class="item"><span class="name">1. Deliver the freebie</span><span class="hl">The "you do not need a fancier camera, you need a system" reframe.</span></div>
+        <div class="item"><span class="name">2. Your story</span><span class="hl">15 years of Studio 29, what you would tell day-one Ren now. Real brand work, no invented claims.</span></div>
+        <div class="item"><span class="name">3. The four settings that actually matter</span><span class="hl">A genuinely useful teach on aperture, shutter, ISO, white balance.</span></div>
+        <div class="item"><span class="name">4. The Momtographer Method offer</span><span class="hl">Who it is for, the application + call, the four-figure-investment honesty, what is inside.</span></div>
+        <div class="item"><span class="name">5. Last call</span><span class="hl">The "you already have experience" permission-granting reframe.</span></div>
+      </div></div>
+    </div>
+
+    <!-- 4 ANGLES -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">4</div><h3>Campaign Angles (5)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="item"><span class="name">1. The Momtographer Method</span><span class="hl">"A 12-week mentorship for moms who want to build a real photography business, taught by a working photographer with 15 years in."</span></div>
+        <div class="item"><span class="name">2. You Do Not Need A Fancier Camera, You Need A System</span><span class="hl">"Stop saving for the camera. Start building the business."</span></div>
+        <div class="item"><span class="name">3. Shoot For Free For The Experience? You Already Have Experience.</span><span class="hl">"Charge like a working photographer, even on your second session."</span></div>
+        <div class="item"><span class="name">4. From Mom Group To Booked Calendar</span><span class="hl">"Wisconsin mom of one, dog of two, 15 years of paid bookings. Here is what I would do differently."</span></div>
+        <div class="item"><span class="name">5. The Pinterest Play Most Photographers Miss</span><span class="hl">"How a 38K Pinterest account becomes a fully booked family photography calendar."</span></div>
+      </div></div>
+    </div>
+
+    <!-- 5 LANDING -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">5</div><h3>Application Page Preview</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>A full <strong>Momtographer Method</strong> application landing page in a clean editorial Wisconsin brand: cream, black, sage, and warm gold accents, Fraunces serif + Inter sans, your real Studio 29 portrait in the hero. It opens on the "you do not need a fancier camera" pain, walks through the three-pillar method, lays out the 12-week program, leads with your real 15-year brand surface (Martha Stewart, West Elm, Nordstrom, Apartment Therapy, Diet Pepsi, Milwaukee Magazine), and drives to a single "apply now" CTA. Education-only disclaimer baked in.</p>
+        <p>It is live and ready to view right now.</p>
+        <a href="https://andrei170.github.io/ren-lenhof-landing/" class="btn-link" target="_blank" rel="noopener">View the live application page</a>
+      </div></div>
+    </div>
+
+    <!-- 6 COMPLIANCE -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">6</div><h3>Compliance Notes (Education-Only, Proof Hygiene)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>You teach photography business, you are not a licensed financial or legal adviser, and your coaching offer is still EARLY enough that proof hygiene matters more than usual. Every piece we ship for you has these guardrails:</p>
+        <ul class="stack-list">
+          <li>"General photography-business education only, individual results vary" disclaimer on landing + footer + FAQ</li>
+          <li>NO fabricated coaching testimonials. Research confirmed your 108+ Birdeye and 111 Poyst reviews are all family-photo clients, those do not translate to Momtographer Method proof. We use them as photography-brand authority (15 years, 5.0 stars, real brand list) without claiming them as student wins.</li>
+          <li>Self-reported "multi-six-figure" and "award-winning" surface claims are NOT printed as fact anywhere in the deliverables. Your real authority is 15 years of Studio 29 and the verified brand client list, which is plenty.</li>
+          <li>Brand client logos (Martha Stewart, West Elm, Nordstrom, etc.) used as "as featured in" credibility, not as student outcomes</li>
+          <li>The four-figure investment is framed honestly inside the funnel so prospects self-qualify before the discovery call</li>
+        </ul>
+        <p style="margin-top:14px;">This keeps the funnel clean while still letting your real 15-year track record do all the heavy lifting it can.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- PROCESS -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">How We Work</div>
+    <h2>Done For You. One Operator.</h2>
+  </div>
+
+  <div class="process-grid">
+    <div class="proc reveal"><div class="step">STEP 01</div><h4>We Productize The Momtographer Method</h4><p>The 12-week mentorship structure, the three-pillar curriculum, the Studio 29 template library, the live group + 1:1 audit format, all in your voice.</p></div>
+    <div class="proc reveal"><div class="step">STEP 02</div><h4>We Wire The Application + Calendar</h4><p>A clean application page (replacing the manual Google Form), connected straight into a Calendly / Cal.com discovery call with pre-call email confirmation. No more reading applications by hand.</p></div>
+    <div class="proc reveal"><div class="step">STEP 03</div><h4>We Point IG + Pinterest Into It</h4><p>Your 10.5K studio IG, the @momtographermethod IG, and the 38.8K @ren_lenhof Pinterest all flow into one link-in-bio path. Pinterest gets purpose-built pin templates targeting "first paid photography client" searches.</p></div>
+    <div class="proc reveal"><div class="step">STEP 04</div><h4>You Coach, We Run The Machine</h4><p>You keep shooting, keep teaching, keep being mom. The funnel keeps converting your content, the application keeps filling the calendar, without you touching the tech.</p></div>
+  </div>
+
+  <!-- HOW WE'D WORK -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">How We'd Work</div>
+    <h2>Simple Terms. Skin In The Game.</h2>
+  </div>
+  <div class="model-grid">
+    <div class="model reveal"><span class="ic">The model</span><h4>A setup fee, then revenue share</h4><p>A one-time build fee to stand it all up, then a share of the new coaching revenue it generates. I only win when you win.</p></div>
+    <div class="model reveal"><span class="ic">One operator</span><h4>You deal with me, not a team</h4><p>I build and run the whole machine myself with AI leverage. One point of contact, fast turnaround, nothing lost in handoffs.</p></div>
+    <div class="model reveal"><span class="ic">Proven</span><h4>Over $1M generated, solo</h4><p>I built a full monetization system from zero for a creator with 180K followers: offer, funnel, email, and community, in weeks.</p></div>
+  </div>
+  <p class="scarcity reveal">I only take on a handful of clients at a time, so I can stay hands-on with every build.</p>
+
+  <!-- HUB FAQ -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">Straight Answers</div>
+    <h2>What You're Probably Wondering</h2>
+  </div>
+  <div class="hub-faq">
+    <div class="qa reveal"><h4>How much does this cost?</h4><p>A setup fee plus revenue share, scoped to what we build. We talk real numbers on the call, once I understand your business. No retainer, no surprises.</p></div>
+    <div class="qa reveal"><h4>How fast can you build it?</h4><p>Fast. These pages were built before we ever spoke. The application page, calendar, and nurture sequence are usually live in a few weeks.</p></div>
+    <div class="qa reveal"><h4>What do you need from me?</h4><p>Your voice and your method. I handle the building, the tech, the copy, the design. You stay focused on coaching the moms in your program.</p></div>
+    <div class="qa reveal"><h4>Why revenue share?</h4><p>Because it aligns us. I do not earn the upside unless the Momtographer Method actually fills with applications. My incentive is your result.</p></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box reveal">
+    <h2>Ready to build this for real?</h2>
+    <p>Everything above was built specifically for you, Ren. Imagine the Momtographer Method funnel wired into your 60K+ audience and your 38K Pinterest, finally pointing somewhere real.</p>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn-link" target="_blank" rel="noopener">Book a call with Andrei</a>
+    <p style="color:var(--muted);font-size:0.92rem;margin:14px auto 0;text-align:center;">Not ready for a call? Just reply and tell me what you think.</p>
+    <p style="color:var(--gold-flat);font-weight:700;font-size:0.9rem;margin:14px auto 0;text-align:center;letter-spacing:.02em;">Over $1M in client revenue generated. One operator.</p>
+  </div>
+
+</div>
+
+<div class="sticky-cta"><a href="https://calendly.com/ag-copy/call-with-andrei">Book a call with Andrei</a></div>
+
+<footer>
+  <div class="wordmark"><span class="ag gold-text">AG1</span> <span class="co">CONSULTING</span></div>
+  <div>High-ticket offers and marketing systems, done for you.</div>
+  <div style="margin-top:14px;"><a href="https://andrei170.github.io/ag1/" target="_blank" rel="noopener" style="color:var(--gold-flat);text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:.02em;">andrei170.github.io/ag1</a></div>
+</footer>
+
+<script>
+  document.querySelectorAll('.acc-head').forEach(function(h){
+    h.addEventListener('click', function(){
+      var card = h.parentElement;
+      var body = card.querySelector('.acc-body');
+      var isOpen = card.classList.contains('open');
+      if (isOpen) { body.style.maxHeight = null; card.classList.remove('open'); }
+      else { card.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  function runCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var start = null, dur = 1100;
+    function step(ts){ if (!start) start = ts; var p = Math.min((ts - start) / dur, 1); el.textContent = Math.floor(p * target); if (p < 1) requestAnimationFrame(step); else el.textContent = target; }
+    requestAnimationFrame(step);
+  }
+  var countObserved = false;
+  var statObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting && !countObserved){ countObserved = true; document.querySelectorAll('[data-count]').forEach(runCount); } });
+  }, { threshold: 0.4 });
+  var statsEl = document.querySelector('.stats');
+  if (statsEl) statObserver.observe(statsEl);
+</script>
+</body>
+</html>
